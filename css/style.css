@@ -832,10 +832,17 @@ main {
     color: var(--white);
 }
 
-.office-details {
+.office-content {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.office-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .office-item {
@@ -862,6 +869,45 @@ main {
     margin: 0;
     line-height: 1.6;
     opacity: 0.9;
+}
+
+.office-map {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: var(--white);
+}
+
+.office-map iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.office-map:hover iframe {
+    transform: scale(1.02);
+}
+
+.map-caption {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    box-shadow: var(--shadow);
+    z-index: 2;
+}
+
+.map-caption i {
+    margin-right: 0.5rem;
+    color: var(--accent-color);
 }
 
 /* Emergency Contact */
@@ -1261,6 +1307,16 @@ footer p {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
     }
+    
+    /* Office Info Responsive */
+    .office-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .office-map iframe {
+        height: 250px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1338,5 +1394,23 @@ footer p {
     .feature-highlight {
         padding: 0.6rem 1rem;
         font-size: 0.9rem;
+    }
+    
+    /* Office Info Small Screen */
+    .office-info {
+        padding: 2rem 1rem;
+    }
+    
+    .office-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .office-map iframe {
+        height: 200px;
+    }
+    
+    .map-caption {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
     }
 } 
