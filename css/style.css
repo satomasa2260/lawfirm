@@ -310,7 +310,7 @@ main {
     background: linear-gradient(135deg, var(--white) 0%, #f8f9fa 100%);
     border: 2px solid #e9ecef;
     border-radius: 20px;
-    padding: 3rem 2rem;
+    padding: 1.5rem;
     text-align: center;
     transition: all 0.3s ease;
     position: relative;
@@ -1192,13 +1192,30 @@ footer p {
         gap: 1.5rem;
     }
     
+    .strength-card {
+        padding: 1.5rem;
+    }
+    
+    .strength-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .strength-icon i {
+        font-size: 3rem;
+    }
+    
+    .strengths-intro {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
     .services-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
     
     .service-card {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem;
     }
     
     .service-card h3 {
@@ -1412,5 +1429,35 @@ footer p {
     .map-caption {
         padding: 0.4rem 0.8rem;
         font-size: 0.8rem;
+    }
+    
+    /* Strengths Section Small Screen */
+    .strengths {
+        padding: 2rem 0;
+    }
+    
+    .strengths h2 {
+        font-size: 2rem;
+    }
+    
+    .strength-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .strength-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .strength-icon i {
+        font-size: 2.5rem;
+    }
+    
+    .strength-details li {
+        font-size: 0.9rem;
+    }
+    
+    .strength-highlight {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
 } 
