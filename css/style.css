@@ -267,49 +267,150 @@ main {
 
 /* Services Section */
 .services {
-    padding: 4rem 0;
-    background-color: var(--light-gray);
+    padding: 5rem 0;
+    background-color: var(--white);
 }
 
 .services h2 {
     text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 3rem;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.service-item {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
-}
-
-.service-item h3 {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
-.service-item p {
+.services h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 1.5rem auto 0;
+}
+
+.services-intro {
+    text-align: center;
+    font-size: 1.2rem;
     color: var(--text-color);
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: linear-gradient(135deg, var(--white) 0%, #f8f9fa 100%);
+    border: 2px solid #e9ecef;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-hover);
+}
+
+.service-icon {
+    margin-bottom: 2rem;
+}
+
+.service-icon i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon i {
+    transform: scale(1.1);
+    color: var(--accent-color);
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    line-height: 1.3;
+}
+
+.service-description {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
     line-height: 1.6;
-    margin: 0;
+}
+
+.service-details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    text-align: left;
+}
+
+.service-details li {
+    padding: 0.5rem 0;
+    color: var(--text-color);
+    font-size: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service-details li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.service-highlight {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(26, 63, 106, 0.3);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-highlight {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(26, 63, 106, 0.4);
 }
 
 /* About Section */
@@ -359,7 +460,7 @@ main {
 
 .office-interior {
     width: 100%;
-    height: auto;
+    height: 300px;
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -516,34 +617,273 @@ main {
 
 /* Contact Section */
 .contact {
-    padding: 4rem 0;
-    background-color: var(--light-gray);
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2c5aa0 100%);
+    color: var(--white);
 }
 
 .contact h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-}
-
-.contact p {
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: var(--text-color);
     margin-bottom: 1rem;
+    color: var(--white);
 }
 
-.contact-info {
+.contact-intro {
     text-align: center;
-    margin-top: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    opacity: 0.95;
 }
 
-.contact-info p {
-    margin-bottom: 0.5rem;
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), #ffd700);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover::before {
+    transform: scaleX(1);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icon {
+    margin-bottom: 1.5rem;
+}
+
+.contact-icon i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.contact-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.contact-description {
     font-size: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.contact-number {
+    margin-bottom: 1.5rem;
+}
+
+.phone-link-large {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-hours {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.contact-hours p {
+    margin: 0.25rem 0;
+}
+
+.line-info, .email-info {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.line-info p, .email-info p {
+    margin: 0.5rem 0;
+}
+
+.email-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: #ffd700;
+}
+
+.contact-button {
+    margin-top: auto;
+}
+
+.btn-primary, .btn-line, .btn-email, .btn-emergency {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(184, 134, 11, 0.4);
+}
+
+.btn-line:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 185, 0, 0.4);
+}
+
+.btn-email:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.btn-emergency:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-color), #ffd700);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+}
+
+.btn-line {
+    background: linear-gradient(135deg, #00B900, #00D100);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(0, 185, 0, 0.3);
+}
+
+.btn-email {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-emergency {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+    font-size: 1.1rem;
+    padding: 1.2rem 2.5rem;
+}
+
+/* Office Info */
+.office-info {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.office-info h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
+.office-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.office-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.office-item i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.office-item strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.office-item p {
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Emergency Contact */
+.emergency-contact {
+    text-align: center;
+    background: rgba(220, 53, 69, 0.1);
+    border: 2px solid rgba(220, 53, 69, 0.3);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.emergency-contact h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.emergency-contact p {
+    margin-bottom: 2rem;
+    opacity: 0.9;
 }
 
 /* Fees Section */
@@ -808,12 +1148,24 @@ footer p {
     
     .services-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
     }
     
-    .strength-card,
-    .service-item {
-        padding: 1.5rem;
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .service-icon i {
+        font-size: 3rem;
+    }
+    
+    .services-intro {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
     }
     
     .fees-grid {
@@ -864,6 +1216,51 @@ footer p {
     .feature-icon i {
         font-size: 3rem;
     }
+    
+    /* Contact Section Responsive */
+    .contact {
+        padding: 3rem 0;
+    }
+    
+    .contact h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-intro {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .contact-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .contact-icon i {
+        font-size: 2.5rem;
+    }
+    
+    .phone-link-large {
+        font-size: 1.5rem;
+    }
+    
+    .office-details {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .btn-primary, .btn-line, .btn-email, .btn-emergency {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -885,6 +1282,36 @@ footer p {
     .contact,
     .fees {
         padding: 3rem 0;
+    }
+    
+    /* Services Section Small Screen */
+    .services {
+        padding: 2rem 0;
+    }
+    
+    .services h2 {
+        font-size: 2rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .service-icon i {
+        font-size: 2.5rem;
+    }
+    
+    .service-details li {
+        font-size: 0.9rem;
+    }
+    
+    .service-highlight {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
     
     /* Features Section Small Screen */

@@ -120,18 +120,63 @@
         <section id="services" class="services">
             <div class="container">
                 <h2>サービス内容</h2>
+                <p class="services-intro">お客様の様々な法律問題に対応いたします。豊富な経験と専門知識で最適な解決策をご提案いたします。</p>
                 <div class="services-grid">
-                    <div class="service-item">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
                         <h3>民事事件</h3>
-                        <p>契約トラブル、損害賠償、相続問題など</p>
+                        <p class="service-description">個人間の法的トラブルを解決いたします</p>
+                        <ul class="service-details">
+                            <li>契約トラブル</li>
+                            <li>損害賠償請求</li>
+                            <li>相続問題</li>
+                            <li>不動産トラブル</li>
+                            <li>交通事故</li>
+                            <li>離婚問題</li>
+                        </ul>
+                        <div class="service-highlight">
+                            <span>豊富な解決実績</span>
+                        </div>
                     </div>
-                    <div class="service-item">
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
                         <h3>刑事事件</h3>
-                        <p>逮捕・勾留、起訴、裁判など</p>
+                        <p class="service-description">刑事事件の弁護活動を全力でサポートいたします</p>
+                        <ul class="service-details">
+                            <li>逮捕・勾留</li>
+                            <li>起訴・不起訴</li>
+                            <li>裁判弁護</li>
+                            <li>保釈請求</li>
+                            <li>証拠収集</li>
+                            <li>被害者支援</li>
+                        </ul>
+                        <div class="service-highlight">
+                            <span>24時間対応</span>
+                        </div>
                     </div>
-                    <div class="service-item">
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
                         <h3>労働問題</h3>
-                        <p>解雇、残業代未払い、パワハラなど</p>
+                        <p class="service-description">労働者の権利を守り、適切な解決を目指します</p>
+                        <ul class="service-details">
+                            <li>解雇・退職勧奨</li>
+                            <li>残業代未払い</li>
+                            <li>パワハラ・セクハラ</li>
+                            <li>労働条件の変更</li>
+                            <li>労災認定</li>
+                            <li>労働組合問題</li>
+                        </ul>
+                        <div class="service-highlight">
+                            <span>労働者に寄り添う</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -284,12 +329,109 @@
         <section id="contact" class="contact">
             <div class="container">
                 <h2>お問い合わせ</h2>
-                <p>法律問題でお困りの際は、お気軽にご相談ください。</p>
-                <p>初回相談は無料で承っております。</p>
-                <div class="contact-info">
-                    <p>電話: 03-XXXX-XXXX</p>
-                    <p>メール: info@law-office.com</p>
-                    <p>住所: 東京都○○区○○ 1-2-3</p>
+                <p class="contact-intro">法律問題でお困りの際は、お気軽にご相談ください。<br>初回相談は無料で承っております。</p>
+                
+                <div class="contact-grid">
+                    <!-- 電話での問い合わせ -->
+                    <div class="contact-card phone-contact">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>電話でのお問い合わせ</h3>
+                        <p class="contact-description">お急ぎの場合はお電話でお気軽にご相談ください</p>
+                        <div class="contact-number">
+                            <a href="tel:0120-123-456" class="phone-link-large">0120-123-456</a>
+                        </div>
+                        <div class="contact-hours">
+                            <p><strong>受付時間</strong></p>
+                            <p>平日 9:00-18:00</p>
+                            <p>土日祝 10:00-17:00</p>
+                        </div>
+                        <div class="contact-button">
+                            <a href="tel:0120-123-456" class="btn-primary">
+                                <i class="fas fa-phone"></i>
+                                今すぐ電話する
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- LINEでの問い合わせ -->
+                    <div class="contact-card line-contact">
+                        <div class="contact-icon">
+                            <i class="fab fa-line"></i>
+                        </div>
+                        <h3>LINEでのお問い合わせ</h3>
+                        <p class="contact-description">24時間いつでもメッセージをお送りいただけます</p>
+                        <div class="line-info">
+                            <p><strong>LINE ID:</strong> @minato-law</p>
+                            <p><strong>QRコード:</strong> 下記ボタンから友達追加</p>
+                        </div>
+                        <div class="contact-button">
+                            <a href="https://line.me/R/ti/p/@minato-law" target="_blank" class="btn-line">
+                                <i class="fab fa-line"></i>
+                                LINEで友達追加
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- メールでの問い合わせ -->
+                    <div class="contact-card email-contact">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>メールでのお問い合わせ</h3>
+                        <p class="contact-description">詳細な内容をお聞かせください</p>
+                        <div class="email-info">
+                            <p><strong>メールアドレス:</strong></p>
+                            <a href="mailto:info@minato-law.com" class="email-link">info@minato-law.com</a>
+                        </div>
+                        <div class="contact-button">
+                            <a href="mailto:info@minato-law.com" class="btn-email">
+                                <i class="fas fa-envelope"></i>
+                                メールを送信
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 事務所情報 -->
+                <div class="office-info">
+                    <h3>事務所情報</h3>
+                    <div class="office-details">
+                        <div class="office-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>住所</strong>
+                                <p>〒100-0001 東京都千代田区千代田1-1-1<br>みなとビル5階</p>
+                            </div>
+                        </div>
+                        <div class="office-item">
+                            <i class="fas fa-train"></i>
+                            <div>
+                                <strong>アクセス</strong>
+                                <p>みなと駅徒歩1分<br>東京駅徒歩10分</p>
+                            </div>
+                        </div>
+                        <div class="office-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>営業時間</strong>
+                                <p>平日 9:00-18:00<br>土日祝 10:00-17:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 緊急時の対応 -->
+                <div class="emergency-contact">
+                    <h3>緊急時の対応</h3>
+                    <p>夜間・休日でも緊急の場合は24時間対応いたします。</p>
+                    <div class="emergency-button">
+                        <a href="tel:0120-123-456" class="btn-emergency">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            緊急時はこちら
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
